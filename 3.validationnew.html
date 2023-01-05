@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>form validation</title>
+</head>
+<body bgcolor="#b3bf65">
+<h1 align="center"><b><u>REGISTRATION FORM</b></u></h1>
+<form id="regform" method="post" onsubmit="return validateForm()">
+<fieldset>
+<legend>REGISTRATION FORM</legend>
+ <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+<label for="mname">Middle Name:</label>
+  <input type="text" id="mname" name="lname"><br><br>
+<label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+<label for="phone">Mobile number:</label>
+  <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"><br><br>
+<label>Enter your Address:</label>
+<textarea></textarea><br><br>
+<label for="email">Enter your email:</label>
+<input type="email" id="email" name="email"><br><br>
+<label >Enter your password:</label>
+<input type="password" id="pass" name="pass"><br><br>
+<label >confirm your password:</label>
+<input type="password" id="cpass" name="cpass"><br><br>
+<input type="submit" value="submit"><br>
+</form>
+<script>
+function validateForm(){
+var fname=document.getElementById("fname").value;
+var mname=document.getElementById("mname").value;
+var lname=document.getElementById("lname").value;
+var pno=document.getElementById("phone").value;
+var add=document.getElementById("lname").value;
+var email=document.getElementById("email").value;
+var pass=document.getElementById("pass").value;
+var cpass=document.getElementById("cpass").value;
+var errorMessage="";
+if (fname=="") {errorMessage += "firstname is required.\n";}
+if (mname=="") {errorMessage += "middlename is required.\n";}
+if (lname=="") {errorMessage += "lastname is required.\n";}
+if (phone=="") {errorMessage += " plaese enter your phone number.\n";}
+if (email=="") {errorMessage += "Email is required.\n";}
+if (pass=="") {errorMessage += "enter your password.\n";}
+if (cpass !=pass) {errorMessage +="Passwords do not match.\n";}
+if (errorMessage != "") {
+alert(errorMessage);
+return false;
+}
+return true;
+}
+</script>
+</body>
