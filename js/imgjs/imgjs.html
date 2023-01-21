@@ -1,0 +1,22 @@
+
+<html>
+<head><title>bgchange</title>
+</head>
+<h1 id="pic">clear sky</h1><br><br>
+<img id="img1" onmouseover="myfunction()" onmouseout="myfunction2()" src="day.jpg">
+
+<script>
+function myfunction()
+{
+document.getElementById("img1").src="night.jpeg";
+document.getElementById("pic").innerHTML="NIGHT";
+}
+
+function myfunction2()
+{
+document.getElementById("img1").src="day.jpg";
+document.getElementById("pic").innerHTML="DAY";
+}
+</script>
+</body>
+</html>
