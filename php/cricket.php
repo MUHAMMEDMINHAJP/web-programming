@@ -1,6 +1,5 @@
     <html>
     <body bgcolor="lightgreen">
-    <h4></h4>
     <?php
     $name=["DHONI(c)","KARTHIK(vc)","HARDIK","NITISH","GILL","KOHLI","SANJU","JADEJA","SHAMI","BUMRAH","CHAHAL"];
     $role=["WICKET KEEPER","BATSMAN","BATSMAN","BATSMAN","BATSMAN","BATSMAN","BATSMAN","ALL ROUNDER","BOWLER","BOWLER","BOWLER"];
